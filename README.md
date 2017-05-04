@@ -1,2 +1,5 @@
 # crawl-python
-Learn crawl with python.
+Learn crawl with python from http://cuiqingcai.com/1052.html. 
+Read the following python codes, you may need to learn the basic python knowledge.
+
+1.qsbk_crawl.py We use crawl to capture the data from QiuShiBaiKe.
