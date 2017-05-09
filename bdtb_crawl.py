@@ -12,7 +12,7 @@ import re
 
 class Tool:
     removeImg = re.compile('<img.*?>| {7}|')
-    removeAddr = re.compile('<a.*?>|</a')
+    removeAddr = re.compile('<a.*?>|</a>')
     replaceLine = re.compile('<tr>|<div>|</div>|</p>')
     replaceTD = re.compile('<td>')
     replacePara = re.compile('<p.*?>')
@@ -86,17 +86,18 @@ class BDTB:
         pages = self.getTotalPages(content)
         print "Total pages is " + pages
 
-        page = 1;
-        print pages
-        while (page <= pages):
-            print pages
-            print "==================BDTB page : " + str(page) + "======================"
-            text = self.getPage(page)
+        pageId = 1
+        pagesNum = int(pages)
+        while (pageId <= pagesNum):
+            print "==================BDTB page : " + str(pageId) + "======================"
+            text = self.getPage(pageId)
             self.getInfo(text)
 
-            page += 1            
+            pageId += 1
+            
         
 bdtb = BDTB(1)
 bdtb.start()
+
 
         
